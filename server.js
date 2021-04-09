@@ -2,10 +2,12 @@ const express = require("express");
 const path = require("path");
 const PORT = process.env.PORT || 3000;
 const app = express();
-const URL = require("./.env");
+const password = require("./.env");
+const username = require("./.env")
 
 const mongoose = require("mongoose");
 
+const url = "mongodb+srv://" + username + ":" + password + "@cluster0.sxlwr.mongodb.net/Userdb?retryWrites=true&w=majority";
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
@@ -23,10 +25,13 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/Userdb", {
   useUnifiedTopology: true,
   useCreateIndex: true,
   useFindAndModify: false
-}, () => {
-  console.log("Database CONNECTED")
-}
-);
+}, url
+) .then ( () => {
+    console.log("Database CONNECTED!")
+})
+.catch ( (err) => {
+  console.log("Error connecting to the database. \n${err}")
+})
 
 
 app.listen(PORT, function() {
