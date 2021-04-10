@@ -1,8 +1,9 @@
 const User = require("../models/User");
-const app = express();
+const express = require('express')
+const router = require("express").Router();
 
 // check to make sure email provided is not registered
-app.post("/register", (req, res) => {
+router.post("/register", (req, res) => {
   User.findOne({ email: req.body.email }).then((user) => {
     if (user) {
       return res
@@ -21,7 +22,7 @@ app.post("/register", (req, res) => {
   });
 });
 
-app.post("/submit", ({ body }, res) => {
+/* app.post("/submit", ({ body }, res) => {
   const user = new User(body);
   user.setFullName();
   user.lastUpdatedDate();
@@ -33,6 +34,6 @@ app.post("/submit", ({ body }, res) => {
     .catch((err) => {
       res.json(err);
     });
-});
+}); */ 
 
-module.exports = Routes;
+module.exports = router;
