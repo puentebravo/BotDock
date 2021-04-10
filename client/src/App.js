@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
+import Amplify, { Auth } from "aws-amplify";
+import awsconfig from "./aws-exports";
+import { withAuthenticator } from "aws-amplify-react-native";
 import "./App.css";
+
+Amplify.configure(awsconfig);
 
 class App extends Component {
   render() {
@@ -18,4 +23,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default withAuthenticator(App);
