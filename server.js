@@ -2,13 +2,15 @@ const express = require("express");
 const path = require("path");
 const PORT = process.env.PORT || 3000;
 const app = express();
+const users = require('./routes/routes');
 const password = require("./.env");
 const username = require("./.env")
 
 const mongoose = require("mongoose");
 
 const url = "mongodb+srv://" + username + ":" + password + "@cluster0.sxlwr.mongodb.net/Userdb?retryWrites=true&w=majority";
-
+app.use(express.json());
+app.use('/api/users', users);
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
