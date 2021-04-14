@@ -1,5 +1,4 @@
 const User = require("../models/User");
-const express = require('express')
 const router = require("express").Router();
 
 // check to make sure email provided is not registered
@@ -34,6 +33,6 @@ router.post("/register", (req, res) => {
     .catch((err) => {
       res.json(err);
     });
-}); */ 
+}); */
 
 module.exports = router;
