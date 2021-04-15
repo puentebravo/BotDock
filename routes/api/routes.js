@@ -1,6 +1,16 @@
-const User = require("../../models/User");
 const userController = require ('../../controllers/userController')
 const router = require("express").Router();
+
+
+router.route('/register') // /api/user/register
+  .post(userController.create);
+
+router.route('/:id')
+  .get(userController.findById)
+  .put(userController.update)
+  .delete(userController.remove);
+
+
 
 // check to make sure email provided is not registered
 // router.post("/register", (req, res) => {
@@ -22,10 +32,9 @@ const router = require("express").Router();
 //   });
 // });
 
-router.route('/register')
-  .post(userController.create)
 
-// router.post("/api/login"), (req, res) => {
+
+// router.post("/api/user/login"), (req, res) => {
 
 //   res.json({
 //     email: req.user.email,
