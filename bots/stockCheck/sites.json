@@ -1,0 +1,8 @@
+[
+  {
+    "url": "https://www.amazon.com/gp/product/B08H75RTZ8?pf_rd_r=FVJ0S1QSPNA5NHJH94S8&pf_rd_p=5ae2c7f8-e0c6-4f35-9071-dc3240e894a8&pd_rd_r=3746dcf7-e9ae-465a-a328-f664f556a4fb&pd_rd_w=SP7J8&pd_rd_wg=Fc6p8&ref_=pd_gw_unk",
+    "xPath": "//*[@id=\"availability\"]/span/text()",
+    "expected": "Currently unavailable",
+    "description": "Xbox Series X - Amazon.com"
+  }
+]
