@@ -2,13 +2,16 @@ const userController = require ('../../controllers/userController')
 const router = require("express").Router();
 
 
-router.route('/register') // /api/user/register
+
+// /api/user/register (this is the path)
+router.route('/register') 
   .post(userController.create);
 
 router.route('/:id')
   .get(userController.findById)
   .put(userController.update)
   .delete(userController.remove);
+
 
 
 
