@@ -1,10 +1,14 @@
 // Primary site ping functions go here
+const { default: Auth } = require("@aws-amplify/auth");
 const { SMS } = require("./notify");
+const { Attributes } = await Auth.currentAuthenticatedUser();
 
 const match = (expected, actual) => {
   if (Array.isArray(expected)) return expected.includes(actual);
   return actual === expected;
 };
+
+
 
 const pingSite = async (site, page) => {
   const { url, xPath, expected, description } = site;
@@ -24,7 +28,7 @@ const pingSite = async (site, page) => {
     const value = String(targetText).replace(/^\s+|\s+$/g, "");
     if (!match(value, expected)) {
       await SMS({
-        to: "user number", //Going to need to pull this from the DB.
+        to: `${Attributes.phone}`,
         from: process.env.TWILIO_NUMBER,
         body: `Success! I expected ${description} to be ${expected}, but instead found that it's ${value}. You should checck out ${url} right away!`,
       });
@@ -32,7 +36,7 @@ const pingSite = async (site, page) => {
   } catch (error) {
     //notify user that the node couldn't be reached.
     await SMS({
-      to: "user number", //Going to need to pull this from the DB.
+      to:`${Attributes.phone}`, //Amplify user call
       from: process.env.TWILIO_NUMBER,
       body: `Sorry, but I couldn't find that item. The listing might have changed, or the website may have changed its layout. Please notify BotDock so we can look into this!`,
     });
