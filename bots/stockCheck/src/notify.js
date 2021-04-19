@@ -19,3 +19,14 @@ function notify({ body, to }) {
       from: phoneNumber
     });
   }
+
+  // returns an array of Promise objects that resolves with Message Objects
+// usage:
+// Promise.all(notifyMultiple({ body: "Body of Message", numbers: ["+15555555555", "+15555555556", ...] }))
+// .then(messages => console.log(messages));
+//
+function notifyMultiple({ body, numbers }) {
+    return numbers.map(to => notify({ body, to }));
+  }
+  
+  module.exports = { notify, notifyMultiple };
