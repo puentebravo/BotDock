@@ -1,26 +1,36 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
-import Amplify, { Auth } from "aws-amplify";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import Home from "./pages/Home"
+import Contact from "./pages/Contact"
+import Directory from "./pages/Directory"
+import NavBar from "./components/NavBar"
+import Amplify from "aws-amplify";
 import awsconfig from "./aws-exports";
 import { withAuthenticator, AmplifySignOut } from "@aws-amplify/ui-react";
+//import logo from './logo.svg';
 import "./App.css";
-
-Amplify.configure(awsconfig);
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
+      <BrowserRouter>
+        <NavBar />
+        <Switch>
+          <Route path="/" component={Home} />
+        </Switch>
+        <Switch>
+          <Route path="/Directory" component={Directory} />
+        </Switch>
+        <Switch>
+          <Route path="/Contact" component={Contact} />
+        </Switch>
+        <AmplifySignOut />
+      </BrowserRouter>
+    )
   }
 }
 
-export default withAuthenticator(App);
+Amplify.configure(awsconfig);
+
+//export default withAuthenticator(App);
+export default App;
