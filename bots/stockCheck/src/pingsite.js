@@ -1,6 +1,6 @@
 // Primary site ping functions go here
 const { default: Auth } = require("@aws-amplify/auth");
-const { SMS } = require("./notify");
+const { notify } = require("./notify");
 const { Attributes } = await Auth.currentAuthenticatedUser();
 
 const match = (expected, actual) => {
@@ -27,7 +27,7 @@ const pingSite = async (site, page) => {
 
     const value = String(targetText).replace(/^\s+|\s+$/g, "");
     if (!match(value, expected)) {
-      await SMS({
+      await notify({
         to: `${Attributes.phone}`,
         from: process.env.TWILIO_NUMBER,
         body: `Success! I expected ${description} to be ${expected}, but instead found that it's ${value}. You should checck out ${url} right away!`,
