@@ -8,8 +8,6 @@ const match = (expected, actual) => {
   return actual === expected;
 };
 
-
-
 const pingSite = async (site, page) => {
   const { url, xPath, expected, description } = site;
 
@@ -32,6 +30,12 @@ const pingSite = async (site, page) => {
         from: process.env.TWILIO_NUMBER,
         body: `Success! I expected ${description} to be ${expected}, but instead found that it's ${value}. You should checck out ${url} right away!`,
       });
+    } else {
+      await notify({
+        to: `${Attributes.phone}`,
+        from: process.env.TWILIO_NUMBER,
+        body: `I'm sorry, but ${description} is ${expected}. Keep at it!` ,
+      })
     }
   } catch (error) {
     //notify user that the node couldn't be reached.
