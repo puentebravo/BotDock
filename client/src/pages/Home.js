@@ -67,7 +67,7 @@ function Home() {
               </a>
               <br></br>
               <Link to="/register" className="font-medium text-indigo-600 hover:text-indigo-500">
-                Don't Have and account? Register Here!
+                Don't Have an account? Register Here!
               </Link>
             </div>
           </div>
