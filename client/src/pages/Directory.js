@@ -1,5 +1,36 @@
-import React, { useState } from "react";
+import React from "react";
+
+/* This example requires Tailwind CSS v2.0+ */
+const bot = [
+    {
+      Bot: 'Gaming Search Bot',
+      creator: 'X-Bots',
+      department: 'Gaming',
+      botList: 'Amazon X-Box Search Bot',
+      image:
+        'https://greendropship.com/wp-content/uploads/2020/05/amazon11111.jpg',
+    },
+    {
+        Bot: 'Shoe Release Search Bot',
+        creator: 'Snkrs Season',
+        department: 'Fashion',
+        botList: 'Snkrs Search Bot',
+        image:
+          'https://is1-ssl.mzstatic.com/image/thumb/Purple114/v4/56/b5/07/56b50784-fb43-d2ed-6a6c-78e55fb436f8/SNKRS-AppIcon-0-0-1x_U007emarketing-0-0-0-10-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/1200x630wa.png',
+      },
+      {
+        Bot: 'Graphics Card Search Bot',
+        creator: '8k Bots',
+        department: 'Technology',
+        botList: 'Amazon Graphics Card Search Bot',
+        image:
+          'https://assets1.ignimgs.com/2019/04/05/graphicscards2019-blogroll-1554499813756.jpg',
+      },
+  ]
+
+
 function Directory() {
+
     return (
         <div>
             {/* Page title starts */}
