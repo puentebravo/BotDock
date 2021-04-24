@@ -3,7 +3,7 @@ const router = require("express").Router();
 
 
 
-// /api/user/register (this is the path)
+// /api/user/register 
 router.route('/register') 
   .post(userController.create);
 

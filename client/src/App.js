@@ -6,7 +6,7 @@ import Directory from "./pages/Directory"
 import NavBar from "./components/NavBar"
 import Amplify from "aws-amplify";
 import awsconfig from "./aws-exports";
-import { withAuthenticator, AmplifySignOut } from "@aws-amplify/ui-react";
+import {AmplifySignOut } from "@aws-amplify/ui-react";
 //import logo from './logo.svg';
 import "./App.css";
 
