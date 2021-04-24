@@ -1,130 +1,57 @@
-import * as React from "react";
-class Directory extends React.Component {
-    render() {
-/* This example requires Tailwind CSS v2.0+ */
-const bot = [
-    {
-      Bot: 'Gaming Search Bot',
-      creator: 'X-Bots',
-      department: 'Gaming',
-      botList: 'Amazon X-Box Search Bot',
-      image:
-        'https://greendropship.com/wp-content/uploads/2020/05/amazon11111.jpg',
-    },
-    {
-        Bot: 'Shoe Release Search Bot',
-        creator: 'Snkrs Season',
-        department: 'Fashion',
-        botList: 'Snkrs Search Bot',
-        image:
-          'https://is1-ssl.mzstatic.com/image/thumb/Purple114/v4/56/b5/07/56b50784-fb43-d2ed-6a6c-78e55fb436f8/SNKRS-AppIcon-0-0-1x_U007emarketing-0-0-0-10-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/1200x630wa.png',
-      },
-      {
-        Bot: 'Graphics Card Search Bot',
-        creator: '8k Bots',
-        department: 'Technology',
-        botList: 'Amazon Graphics Card Search Bot',
-        image:
-          'https://assets1.ignimgs.com/2019/04/05/graphicscards2019-blogroll-1554499813756.jpg',
-      },
-  ]
+import React, { useState } from "react";
+function Index() {
     return (
-    <div className="container mx-auto px-2">
-        <div className="grid grid-cols-2 auto-rows-max">
-            <div className="flex flex-row">
-                    <div className="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
-                    <table className="min-w-full divide-y divide-gray-200">
-                        <thead className="bg-gray-50">
-                        <tr>
-                            <th
-                            scope="col"
-                            className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                            >
-                            Bot List
-                            </th>
-                            <th
-                            scope="col"
-                            className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                            >
-                            Creator
-                            </th>
-                            <th
-                            scope="col"
-                            className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                            >
-                            Status
-                            </th>
-                        </tr>
-                        </thead>
-                        <tbody className="bg-white divide-y divide-gray-200">
-                        {bot.map((botType) => (
-                            <tr key={botType.botList}>
-                            <td className="px-6 py-4 whitespace-nowrap">
-                                <div className="flex items-center">
-                                <div className="flex-shrink-0 h-10 w-10">
-                                    <img className="h-10 w-10 rounded-full" src={botType.image} alt="" />
-                                </div>
-                                <div className="ml-4">
-                                    <div className="text-sm font-medium text-gray-900">{botType.name}</div>
-                                    <div className="text-sm text-gray-500">{botType.botList}</div>
-                                </div>
-                                </div>
-                            </td>
-                            <td className="px-6 py-4 whitespace-nowrap">
-                                <div className="text-sm text-gray-900">{botType.creator}</div>
-                                <div className="text-sm text-gray-500">{botType.department}</div>
-                            </td>
-                            <td className="px-6 py-4 whitespace-nowrap">
-                                <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-                                Active
-                                </span>
-                            </td>
-                            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{botType.role}</td>
-                            </tr>
-                        ))}
-                        </tbody>
-                    </table>
+        <div>
+            {/* Page title starts */}
+            <div className="relative z-10 bg-gray-800 pt-8 pb-16">
+                <div className="container px-6 mx-auto flex flex-col lg:flex-row items-start lg:items-center justify-between">
+                    <div>
+                        <h4 className="text-2xl font-bold leading-tight text-white">Directory</h4>
                     </div>
                 </div>
-                <div>
-
-                <div class="container mx-auto">
-                    <form action="#" method="POST">
-                      <div className="mt-1 flex rounded-md shadow-sm">
-                  <div>
-                    <label htmlFor="Description" className="block text-sm font-medium text-gray-700">
-                      Description
-                    </label>
-                    <div className="mt-1">
-                      <textarea
-                        id="about"
-                        name="about"
-                        rows={3}
-                        className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border-gray-300 rounded-md"
-                        placeholder="you@example.com"
-                        defaultValue={''}
-                      />
+            </div>
+            {/* Page title ends */}
+            <div className="bg-gray-200 pb-10">
+                <div className="container px-6 mx-auto">
+                    <div className="relative z-10 w-full">
+                        <div className="w-full -mt-8 h-auto">
+                            <div className="w-full h-auto lg:h-20 mb-6 rounded shadow bg-white">
+                                <div className="lg:hidden bg-white w-full relative">
+                                    <div className="absolute inset-0 m-auto mr-4 z-0 w-6 h-6">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-selector" width={24} height={24} viewBox="0 0 24 24" strokeWidth="1.5" stroke="#A0AEC0" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" />
+                                            <polyline points="8 9 12 5 16 9" />
+                                            <polyline points="16 15 12 19 8 15" />
+                                        </svg>
+                                    </div>
+                                    <select aria-label="Selected tab" className="form-select block w-full p-3 border border-gray-300 rounded text-gray-600 appearance-none bg-transparent relative z-10">
+                                        <option selected className="text-sm text-gray-600">
+                                            Amazon X-Box Search Bot{" "}
+                                        </option>
+                                        <option className="text-sm text-gray-600">Bot 2 </option>
+                                        <option className="text-sm text-gray-600">Bot 3 </option>
+                                        <option className="text-sm text-gray-600">Bot 4 </option>
+                                    </select>
+                                </div>
+                                <ul className="hidden lg:flex flex-row items-center h-full">
+                                    <li className="ml-4 my-2 lg:my-0 rounded text-base text-gray-800 px-4 py-2 bg-gray-200">Amazon X-Box Search Bot</li>
+                                    <li className="pl-10 my-0 text-base text-gray-600">Bot 2</li>
+                                    <li className="pl-10 my-0 text-base text-gray-600">Bot 3</li>
+                                    <li className="pl-10 my-0 text-base text-gray-600">Bot 4</li>
+                                </ul>
+                            </div>
+                            {/* Remove class [ h-64 ] when adding a card block */}
+                            <div className="container mx-auto h-64">
+                                <div className="bg-white w-full h-full rounded shadow">{/* Place your content here */}</div>
+                            </div>
+                        </div>
                     </div>
-                  <div>
-                    <div className="mt-1 flex items-center">
-                    </div>
-                  </div>
-                    </div>
-                <div className="px-4 py-3 bg-gray-50 text-right sm:px-6">
-                  <button
-                    type="submit"
-                    className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                  >
-                    Deploy
-                  </button>
                 </div>
-              </div>
-            </form>
-          </div>
-          </div>
-      </div>
-    </div>
-    )
-  }
+            </div>
+        </div>
+    );
 }
-export default Directory
+
+export default Index;
+
+//export default Directory
