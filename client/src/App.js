@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route,  } from "react-router-dom";
 import Home from "./pages/Home"
 import Contact from "./pages/Contact"
 import Directory from "./pages/Directory"
@@ -13,15 +13,16 @@ import "./App.css";
 class App extends Component {
   render() {
     return (
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <NavBar />
 
-          <Route path="/" component={Home} />
+          <Route exact path="/" component={Home} />
 
 
-          <Route path="/Directory" component={Directory} />
+          <Route exact path="/Directory" component={Directory} />
 
-          <Route path="/Contact" component={Contact} />
+          <Route exact path="/Contact" component={Contact} />
+
 
         <AmplifySignOut />
       </BrowserRouter>
