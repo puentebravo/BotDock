@@ -1,6 +1,5 @@
 import React from "react";
-class Contact extends React.Component {
-    render() {
+function Contact() {
             return (
               <>
               <div className="container mx-auto px-4"></div>
@@ -176,5 +175,4 @@ class Contact extends React.Component {
             )
           }
           
-    }
 export default Contact

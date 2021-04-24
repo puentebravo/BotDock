@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-function Index() {
+function Directory() {
     return (
         <div>
             {/* Page title starts */}
@@ -52,6 +52,6 @@ function Index() {
     );
 }
 
-export default Index;
+export default Directory;
 
 //export default Directory
