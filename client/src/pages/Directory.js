@@ -1,4 +1,5 @@
 import React from "react";
+import NavBar from "../components/NavBar"
 
 /* This example requires Tailwind CSS v2.0+ */
 const bot = [
@@ -30,9 +31,11 @@ const bot = [
 
 
 function Directory() {
-
+    
     return (
+        
         <div>
+            {<NavBar/>}
             {/* Page title starts */}
             <div className="relative z-10 bg-gray-800 pt-8 pb-16">
                 <div className="container px-6 mx-auto flex flex-col lg:flex-row items-start lg:items-center justify-between">
