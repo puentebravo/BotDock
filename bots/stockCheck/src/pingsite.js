@@ -40,7 +40,7 @@ const pingSite = async (site, page) => {
   } catch (error) {
     //notify user that the node couldn't be reached.
     await SMS({
-      to:`${Attributes.phone}`, //Amplify user call
+      to: `${Attributes.phone}`, //Amplify user call
       from: process.env.TWILIO_NUMBER,
       body: `Sorry, but I couldn't find that item. The listing might have changed, or the website may have changed its layout. Please notify BotDock so we can look into this!`,
     });
