@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import {Link} from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import Contact from "../pages/Contact";
 import Directory from "../pages/Directory";
 import Home from "../pages/Home";
@@ -24,7 +25,9 @@ export default function IndexPage() {
                                 <h3 className="text-base text-white font-bold tracking-normal leading-tight ml-3 hidden lg:block">BotDock</h3>
                             </div>
                             <ul className="hidden xl:flex items-center h-full">
-                                <li className="cursor-pointer h-full flex items-center text-sm text-indigo-700 tracking-normal transition duration-150 ease-in-out">
+                               <Link to="/"> 
+                               <li className="cursor-pointer h-full flex items-center text-sm text-indigo-700 tracking-normal transition duration-150 ease-in-out">
+                                    
                                     <span className="mr-2">
                                         <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-grid" width={20} height={20} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                                             <path stroke="none" d="M0 0h24v24H0z" />
@@ -35,7 +38,10 @@ export default function IndexPage() {
                                         </svg>
                                     </span>
                                     Home
+                                    
                                 </li>
+                                </Link>
+                                <Link to="/Directory">
                                 <li className="cursor-pointer h-full flex items-center text-sm hover:text-indigo-700 text-white mx-10 tracking-normal transition duration-150 ease-in-out">
                                     <span className="mr-2">
                                         <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-puzzle" width={20} height={20} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -45,6 +51,8 @@ export default function IndexPage() {
                                     </span>
                                     Directory
                                 </li>
+                                </Link>
+                                <Link to="/Contact">
                                 <li className="cursor-pointer h-full flex items-center text-sm hover:text-indigo-700 text-white mr-10 tracking-normal transition duration-150 ease-in-out">
                                     <span className="mr-2">
                                         <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-compass" width={20} height={20} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -55,6 +63,7 @@ export default function IndexPage() {
                                     </span>
                                     Contact
                                 </li>
+                                </Link>
                             </ul>
                         </div>
                         <div className="flex items-center xl:hidden">
@@ -152,8 +161,9 @@ export default function IndexPage() {
                                             </div>
                                         </div>
                                         <ul className="f-m-m">
-                                            <Link to="/">
+                                            
                                                 <li className="text-white pt-10">
+                                                    <Link to="/">
                                                     <div className="flex items-center">
                                                         <div className="w-6 h-6 md:w-8 md:h-8 text-indigo-700">
                                                             <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-grid" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -166,10 +176,12 @@ export default function IndexPage() {
                                                         </div>
                                                         <p className="text-indigo-700 xl:text-base text-base ml-3">Home</p>
                                                     </div>
+                                                    </Link>
                                                 </li>
-                                            </Link>
-                                            <a href="/Directory" onClick={Directory}>
+                                            
+                                            
                                                 <li className="text-white pt-8">
+                                                    <Link to="/Directory">
                                                     <div className="flex items-center justify-between">
                                                         <div className="flex items-center">
                                                             <div className="w-6 h-6 md:w-8 md:h-8 text-white">
@@ -181,8 +193,9 @@ export default function IndexPage() {
                                                             <p className="text-white xl:text-base  text-base ml-3">Directory</p>
                                                         </div>
                                                     </div>
+                                                    </Link>
                                                 </li>
-                                            </a>
+                                            
                                             <Link to="/Contact">
                                                 <li className="text-white pt-8">
                                                     <div className="flex items-center">
