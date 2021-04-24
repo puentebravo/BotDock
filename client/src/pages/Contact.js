@@ -1,7 +1,10 @@
 import React from "react";
+import NavBar from "../components/NavBar"
+
 function Contact() {
             return (
               <>
+              <NavBar/>
               <div className="container mx-auto px-4"></div>
                 <div className="hidden sm:block" aria-hidden="true">
                   <div className="py-5">

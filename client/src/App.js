@@ -5,6 +5,7 @@ import Contact from "./pages/Contact"
 import Directory from "./pages/Directory"
 import NavBar from "./components/NavBar"
 import Amplify from "aws-amplify";
+import Register from "./pages/Registration"
 import awsconfig from "./aws-exports";
 import {AmplifySignOut } from "@aws-amplify/ui-react";
 //import logo from './logo.svg';
@@ -14,15 +15,13 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter basename={process.env.PUBLIC_URL}>
-        <NavBar />
-
+        
+        <Route exact path="/register" component={Register} />
           <Route exact path="/" component={Home} />
-
 
           <Route exact path="/Directory" component={Directory} />
 
           <Route exact path="/Contact" component={Contact} />
-
 
         <AmplifySignOut />
       </BrowserRouter>
