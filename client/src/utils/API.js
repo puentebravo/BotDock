@@ -1,6 +1,6 @@
-// import axios from "axios";
+import axios from "axios";
 
-// export default {
+export default {
 //   getBot: function (query) {
 //     return axios.get(`https://www.googleapis.com/bots/v1/volumes?q=${query}`);
 //   },
@@ -16,4 +16,11 @@
 //   savedBots: function () {
 //     return axios.get("/api/bots").then(result => result.data);
 //   }
-// };
+
+    saveUser: function (userData) {
+        return axios.post ("/api/user/register", userData)
+    }
+
+};
+
+

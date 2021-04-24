@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
+import { BellIcon, MenuIcon, XIcon } from '@iconify/react';
 export default function NavBar(props) {
     // return <div className="flex justify-between">
     //     <Link to="/">Home</Link>
@@ -20,6 +20,7 @@ const navigation = [
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
+
   return (
     <Disclosure as="nav" className="bg-gray-800">
       {({ open }) => (
@@ -80,5 +81,6 @@ function classNames(...classes) {
         </>
       )}
     </Disclosure>
+  
   )
 }

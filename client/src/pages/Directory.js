@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 class Directory extends React.Component {
     render() {
 /* This example requires Tailwind CSS v2.0+ */
