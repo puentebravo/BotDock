@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {Link} from "react-router-dom";
 import Contact from "../pages/Contact";
 import Directory from "../pages/Directory";
 import Home from "../pages/Home";
@@ -151,7 +152,7 @@ export default function IndexPage() {
                                             </div>
                                         </div>
                                         <ul className="f-m-m">
-                                            <a href="/Home" onClick={Home}>
+                                            <Link to="/">
                                                 <li className="text-white pt-10">
                                                     <div className="flex items-center">
                                                         <div className="w-6 h-6 md:w-8 md:h-8 text-indigo-700">
@@ -166,7 +167,7 @@ export default function IndexPage() {
                                                         <p className="text-indigo-700 xl:text-base text-base ml-3">Home</p>
                                                     </div>
                                                 </li>
-                                            </a>
+                                            </Link>
                                             <a href="/Directory" onClick={Directory}>
                                                 <li className="text-white pt-8">
                                                     <div className="flex items-center justify-between">
@@ -182,7 +183,7 @@ export default function IndexPage() {
                                                     </div>
                                                 </li>
                                             </a>
-                                            <a href="/Contact" onClick={Contact}>
+                                            <Link to="/Contact">
                                                 <li className="text-white pt-8">
                                                     <div className="flex items-center">
                                                         <div className="w-6 h-6 md:w-8 md:h-8 text-white">
@@ -195,7 +196,7 @@ export default function IndexPage() {
                                                         <p className="text-white xl:text-base  text-base ml-3">Contact</p>
                                                     </div>
                                                 </li>
-                                            </a>
+                                            </Link>
                                             <li className="text-white pt-8 cursor-pointer">
                                                 <div className="flex items-center justify-between">
                                                 </div>

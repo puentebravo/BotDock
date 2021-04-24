@@ -1,7 +1,8 @@
 import React from "react";
 import {Link} from "react-router-dom";
-class Home extends React.Component {
-    render() {
+
+
+function Home() {
         return (
             <>
         <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
@@ -85,6 +86,5 @@ class Home extends React.Component {
         </>
         )
     }
-}
 
 export default Home

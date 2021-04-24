@@ -15,15 +15,14 @@ class App extends Component {
     return (
       <BrowserRouter>
         <NavBar />
-        <Switch>
+
           <Route path="/" component={Home} />
-        </Switch>
-        <Switch>
+
+
           <Route path="/Directory" component={Directory} />
-        </Switch>
-        <Switch>
+
           <Route path="/Contact" component={Contact} />
-        </Switch>
+
         <AmplifySignOut />
       </BrowserRouter>
     )
