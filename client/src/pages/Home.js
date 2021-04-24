@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 class Home extends React.Component {
     render() {
         return (
@@ -63,6 +64,10 @@ class Home extends React.Component {
               <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">
                 Forgot your password?
               </a>
+              <br></br>
+              <Link to="/register" className="font-medium text-indigo-600 hover:text-indigo-500">
+                Don't Have and account? Register Here!
+              </Link>
             </div>
           </div>
 
