@@ -3,7 +3,7 @@ import { Formik } from 'formik';
 import * as Yup from "yup";
 
 const ContactSchema = Yup.object().shape({
-  emailAddress: Yup.string()
+  email: Yup.string()
     .email("Email Is Invalid")
     .required("Email Is Required")
     .max(255, "Email Must Be 255 Characters Or Less"),
@@ -32,12 +32,19 @@ class Contact extends React.Component {
                     <h3 className="text-lg font-medium leading-6 text-gray-900 px-4">Contact Information</h3>
                   </div>
                 </div>
-                <div className="mt-5 md:mt-0 md:col-span-2">
+                <div>
                   <Formik
                     initialValues={{ firstName: "", lastName: "", email: ""}}
                     validationSchema={ContactSchema}
-                    onSubmit={values => console.log(values)}
-                  />
+                    onSubmit={async values => {
+                      /* make API request here:
+                      
+                      const response = await fetch(`/user/${userId}`, { method: "PUT", body: JSON.stringify(values) })
+                      const data = await response.json()
+                      */
+                      console.log(values)
+                    }}
+                  >
                     {({ values, errors, touched, handleChange, handleBlur, handleSubmit, isSubmitting }) => (
                       <form onSubmit={handleSubmit}>
                         <div className="shadow overflow-hidden sm:rounded-md">
@@ -55,11 +62,12 @@ class Contact extends React.Component {
                                   onBlur={handleBlur("firstName")}
                                   onChange={handleChange("firstName")}
                                   autoComplete="given-name"
-                                  className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                                  className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md border-solid border-1"
                                 />
+                                <p style={{ backgroundColor: "rgba(255, 0, 0, 0.3)"}}>{errors.firstName && touched.firstName && errors.firstName}</p>
                               </div>
           
-                              <div className="col-span-6 sm:col-span-3">
+                              <div className="col-span-6 sm:col-span-3 border-solid">
                                 <label htmlFor="last_name" className="block text-sm font-medium text-gray-700">
                                   Last name
                                 </label>
@@ -73,6 +81,7 @@ class Contact extends React.Component {
                                   autoComplete="family-name"
                                   className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                                 />
+                                <p style={{ backgroundColor: "rgba(255, 0, 0, 0.3)"}}>{errors.lastName && touched.lastName && errors.lastName}</p>
                               </div>
           
                               <div className="col-span-6 sm:col-span-4">
@@ -89,6 +98,7 @@ class Contact extends React.Component {
                                   autoComplete="email"
                                   className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                                 />
+                                <p style={{ backgroundColor: "rgba(255, 0, 0, 0.3)"}}>{errors.email && touched.email && errors.email}</p>
                               </div>
                             </div>
                           </div>
@@ -104,6 +114,7 @@ class Contact extends React.Component {
                         </div>
                       </form>
                     )}
+                  </Formik>
                 </div>
               </div>
             </div>
