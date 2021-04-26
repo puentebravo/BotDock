@@ -5,24 +5,6 @@ const app = express();
 const routes = require("./routes");
 const password = require("./.env");
 const username = require("./.env");
-
-//Passport/Bcrypt related imports - enable these if we need to use passport instead of amplify
-
-// const session = require("express-session");
-// const passport = require("./config/passport");
-
-// Passport middleware. Enable this *only if* AWS amplify doesn't work.
-
-// app.use(
-//   session({ secret: "FIRTT#zRK2CY", resave: true, saveUnitialized: true })
-// );
-// app.use(passport.initialize());
-// app.use(passport.session());
-// app.use((req, res, next) => {
-//   res.locals.currentUser = req.user;
-//   next();
-// });
-
 const mongoose = require("mongoose");
 
 const url =
