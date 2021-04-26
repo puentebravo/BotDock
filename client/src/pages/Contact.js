@@ -18,7 +18,7 @@ const ContactSchema = Yup.object().shape({
 class Contact extends React.Component {
     render() {
         return (
-          <>{<NavBar/>}
+          <>
           <div className="container mx-auto px-4"></div>
             <div className="hidden sm:block" aria-hidden="true">
               
