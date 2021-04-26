@@ -19,21 +19,24 @@ Amplify.configure(awsconfig);
 
 
 function App() {
-   const [Auth, setAuth] = useState();
+  //  const [Auth, setAuth] = useState();
 
-  // Similar to componentDidMount and componentDidUpdate:
-  useEffect(() => {
-    // Update the document title using the browser API
-    if (Auth === AuthState.SignedIn) {
+  // // Similar to componentDidMount and componentDidUpdate:
+  // useEffect(() => {
+  //   // Update the document title using the browser API
+  //   if (Auth === AuthState.SignedIn) {
+  //     window.location.href = ("/Directory")
+  //   }
+  // }, []);
+  // const handleAuthStateChange = (nextAuthState) =>{
+  //   if (nextAuthState === AuthState.SignedIn) {
+  //     setAuth(nextAuthState)
+  //   }
+  // }
+  handleAuthStateChange((nextAuthState) => {
+    if (nextAuthState === AuthState.SignedIn) {
       window.location.href = ("/Directory")
     }
-  }, []);
-  const handleAuthStateChange = (nextAuthState) =>{
-    if (nextAuthState === AuthState.SignedIn) {
-      setAuth(nextAuthState)
-    }
-  }
-  
     return (
       <AmplifyAuthenticator handleAuthStateChange={handleAuthStateChange} >
       <BrowserRouter basename={process.env.PUBLIC_URL}>
@@ -48,7 +51,8 @@ function App() {
       </AmplifyAuthenticator>
     );
 
-}
+})
+
 
 
 
