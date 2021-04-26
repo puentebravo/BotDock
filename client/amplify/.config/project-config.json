@@ -8,10 +8,10 @@
   "javascript": {
     "framework": "react",
     "config": {
-      "SourceDir": "C:\\Users\\Eric\\Desktop\\Bootcamp\\Project_3\\BotDock\\client\\src",
-      "DistributionDir": "default",
-      "BuildCommand": "npm start",
-      "StartCommand": "npm start"
+      "SourceDir": "src",
+      "DistributionDir": "build",
+      "BuildCommand": "npm.cmd run-script build",
+      "StartCommand": "npm.cmd run-script start"
     }
   }
 }
