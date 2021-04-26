@@ -16,7 +16,11 @@ import "./App.css";
 
 Amplify.configure(awsconfig);
 
-
+const handleAuthStateChange = ((nextAuthState) => {
+  if (nextAuthState === AuthState.SignedIn) {
+    window.location.href = ("/Directory")
+  }
+})
 
 function App() {
   //  const [Auth, setAuth] = useState();
@@ -33,10 +37,7 @@ function App() {
   //     setAuth(nextAuthState)
   //   }
   // }
-  handleAuthStateChange((nextAuthState) => {
-    if (nextAuthState === AuthState.SignedIn) {
-      window.location.href = ("/Directory")
-    }
+  
     return (
       <AmplifyAuthenticator handleAuthStateChange={handleAuthStateChange} >
       <BrowserRouter basename={process.env.PUBLIC_URL}>
@@ -49,8 +50,8 @@ function App() {
       </BrowserRouter>
       </AmplifyAuthenticator>
     );
-
-})
+  
+}
 
 
 

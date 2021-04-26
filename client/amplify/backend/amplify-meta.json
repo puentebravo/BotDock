@@ -18,11 +18,6 @@
       "providerPlugin": "awscloudformation",
       "dependsOn": [],
       "customAuth": false,
-      "providerMetadata": {
-        "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplifyaae3f72c6fc24-staging-02628-deployment/amplify-cfn-templates/auth/BotDock-cloudformation-template.yml",
-        "logicalId": "authBotDock"
-      },
-      "lastPushTimeStamp": "2021-04-26T16:28:46.540Z",
       "output": {
         "UserPoolId": "us-east-2_SsMdZ0Dso",
         "AppClientIDWeb": "1amqacbpj7vontrem6glc8ou14",
@@ -31,7 +26,11 @@
         "IdentityPoolName": "testAuthIdentityPool__staging",
         "UserPoolName": "BotDock"
       },
-      "lastPushDirHash": "+pnw1cx8Kal1C/8S0VCjFFuYMNY="
+      "lastPushTimeStamp": "2021-04-26T18:32:26.204Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplifyaae3f72c6fc24-staging-02628-deployment/amplify-cfn-templates/auth/BotDock-cloudformation-template.yml",
+        "logicalId": "authBotDock"
+      }
     }
   }
 }
