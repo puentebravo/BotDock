@@ -1,7 +1,0 @@
-type UserModel @model @auth(rules: [{allow: public}]) {
-  id: ID!
-  userName: String
-  password: String
-  email: AWSEmail
-  phone: AWSPhone
-}
