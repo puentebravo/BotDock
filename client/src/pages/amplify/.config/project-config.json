@@ -1,0 +1,17 @@
+{
+  "providers": [
+    "awscloudformation"
+  ],
+  "projectName": "BotDock",
+  "version": "3.1",
+  "frontend": "javascript",
+  "javascript": {
+    "framework": "react",
+    "config": {
+      "SourceDir": "C:\\Users\\Eric\\Desktop\\Bootcamp\\Project_3\\BotDock\\client\\src",
+      "DistributionDir": "C:\\Users\\Eric\\Desktop\\Bootcamp\\Project_3\\BotDock\\client\\src",
+      "BuildCommand": "npm build",
+      "StartCommand": "npm start"
+    }
+  }
+}
