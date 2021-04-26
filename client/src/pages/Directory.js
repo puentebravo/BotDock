@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import NavBar from "../components/NavBar"
 
 const bots = [
     {name: "Amazon X-Box Search Bot"},
