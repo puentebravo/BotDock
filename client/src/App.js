@@ -23,7 +23,6 @@ class App extends Component {
           <Route exact path="/" component={AmplifySignIn} />
 
           <Route exact path="/Directory" component={Directory} />
-
           <Route exact path="/Contact" component={Contact} />
       </BrowserRouter>
       </AmplifyAuthenticator>
