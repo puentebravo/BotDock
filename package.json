@@ -34,11 +34,8 @@
     "if-env": "^1.0.4",
     "mongodb": "^3.6.6",
     "mongoose": "^5.12.3",
-    "passport": "^0.4.1",
-    "passport-local": "^1.0.0",
     "puppeteer": "^8.0.0",
     "react-router-dom": "^5.2.0",
-    "serve": "^11.3.2",
     "twilio": "^3.60.0",
     "yup": "^0.32.9"
   }

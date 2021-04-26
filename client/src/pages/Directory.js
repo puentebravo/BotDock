@@ -14,7 +14,10 @@ function Index() {
     return (
         
         <div>
+<<<<<<< HEAD
             
+=======
+>>>>>>> e57446f8e4db0359c8799261eb107e619b44636f
             {/* Page title starts */}
             <div className="relative z-10 bg-gray-800 pt-8 pb-16">
                 <div className="container px-6 mx-auto flex flex-col lg:flex-row items-start lg:items-center justify-between">
