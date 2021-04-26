@@ -26,12 +26,12 @@ function App() {
   //  const [Auth, setAuth] = useState();
 
   // // Similar to componentDidMount and componentDidUpdate:
-  // useEffect(() => {
-  //   // Update the document title using the browser API
-  //   if (Auth === AuthState.SignedIn) {
-  //     window.location.href = ("/Directory")
-  //   }
-  // }, []);
+  function MyComponent(props){
+    useEffect((nextAuthState)=>{
+      handleAuthStateChange()
+      
+    }, [])
+  }
   // const handleAuthStateChange = (nextAuthState) =>{
   //   if (nextAuthState === AuthState.SignedIn) {
   //     setAuth(nextAuthState)
@@ -39,7 +39,7 @@ function App() {
   // }
   
     return (
-      <AmplifyAuthenticator handleAuthStateChange={handleAuthStateChange} >
+      <AmplifyAuthenticator MyComponent={MyComponent} >
       <BrowserRouter basename={process.env.PUBLIC_URL}>
         <NavBar />
         
