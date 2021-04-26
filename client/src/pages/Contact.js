@@ -1,6 +1,7 @@
 import React from "react";
 import { Formik } from 'formik';
 import * as Yup from "yup";
+import NavBar from "../components/NavBar"
 
 const ContactSchema = Yup.object().shape({
   email: Yup.string()
@@ -17,9 +18,11 @@ const ContactSchema = Yup.object().shape({
 class Contact extends React.Component {
     render() {
         return (
+          
           <>
           <div className="container mx-auto px-4"></div>
             <div className="hidden sm:block" aria-hidden="true">
+              {<NavBar/>}
               <div className="py-5">
                 <div className="border-t border-gray-200" />
               </div>

@@ -12,7 +12,9 @@ function Index() {
     const [selectedBot, setSelectedBot] = useState(0);
 
     return (
+        
         <div>
+            {<NavBar />}
             {/* Page title starts */}
             <div className="relative z-10 bg-gray-800 pt-8 pb-16">
                 <div className="container px-6 mx-auto flex flex-col lg:flex-row items-start lg:items-center justify-between">
