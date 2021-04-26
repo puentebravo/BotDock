@@ -41,7 +41,7 @@ export default function IndexPage() {
                                     
                                 </li>
                                 </Link>
-                                <Link to="/Directory">
+                                <Link to="/">
                                 <li className="cursor-pointer h-full flex items-center text-sm hover:text-indigo-700 text-white mx-10 tracking-normal transition duration-150 ease-in-out">
                                     <span className="mr-2">
                                         <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-puzzle" width={20} height={20} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">

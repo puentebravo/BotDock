@@ -63,9 +63,9 @@ function Home() {
             </div>
 
             <div className="text-sm">
-              <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">
+              <Link to="#" className="font-medium text-indigo-600 hover:text-indigo-500">
                 Forgot your password?
-              </a>
+              </Link>
               <br></br>
               <Link to="/register" className="font-medium text-indigo-600 hover:text-indigo-500">
                 Don't Have an account? Register Here!

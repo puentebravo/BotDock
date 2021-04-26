@@ -5,52 +5,55 @@ import Directory from "./pages/Directory";
 import NavBar from "./components/NavBar";
 import Amplify from "aws-amplify";
 import awsconfig from "./aws-exports";
-import { AuthState, } from "@aws-amplify/ui-components";
+import { AuthState, onAuthUIStateChange  } from "@aws-amplify/ui-components";
 import {
   withAuthenticator,
   AmplifySignIn,
+  AmplifySignOut,
   AmplifyAuthenticator,
 } from "@aws-amplify/ui-react";
 //import logo from './logo.svg';
 import "./App.css";
 
+
 Amplify.configure(awsconfig);
 
-const handleAuthStateChange = ((nextAuthState) => {
-  if (nextAuthState === AuthState.SignedIn) {
-    window.location.href = ("/Directory")
-  }
-})
+
+
+
+
+
+  
+
+
+
+
+    
 
 function App() {
-  //  const [Auth, setAuth] = useState();
-
-  // // Similar to componentDidMount and componentDidUpdate:
-  function MyComponent(props){
-    useEffect((nextAuthState)=>{
-      handleAuthStateChange()
-      
-    }, [])
+  function handleAuthStateChange (nextAuthState) {
+  if (nextAuthState === AuthState.SignedIn) {
+    window.location.href = ("/Directory")
+    
   }
-  // const handleAuthStateChange = (nextAuthState) =>{
-  //   if (nextAuthState === AuthState.SignedIn) {
-  //     setAuth(nextAuthState)
-  //   }
-  // }
-  
-    return (
-      <AmplifyAuthenticator MyComponent={MyComponent} >
+}
+
+
+  return (
+    
+      <AmplifyAuthenticator >
       <BrowserRouter basename={process.env.PUBLIC_URL}>
         <NavBar />
         
-          <Route exact path="/" component={AmplifySignIn} />
+          {/* <Route exact path="/" component={AmplifySignIn} /> */}
 
-          <Route exact path="/Directory" component={Directory} />
+          <Route exact path="/" component={Directory} />
           <Route exact path="/Contact" component={Contact} />
       </BrowserRouter>
+      <AmplifySignOut/>
       </AmplifyAuthenticator>
     );
-  
+   
 }
 
 
