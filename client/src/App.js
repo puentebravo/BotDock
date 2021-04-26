@@ -1,10 +1,11 @@
-import React, { Component } from "react";
+import React, { Component, useState, useEffect, } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 import Contact from "./pages/Contact";
 import Directory from "./pages/Directory";
 import NavBar from "./components/NavBar";
 import Amplify from "aws-amplify";
 import awsconfig from "./aws-exports";
+import { AuthState, } from "@aws-amplify/ui-components";
 import {
   withAuthenticator,
   AmplifySignIn,
@@ -13,10 +14,28 @@ import {
 //import logo from './logo.svg';
 import "./App.css";
 
-class App extends Component {
-  render() {
+Amplify.configure(awsconfig);
+
+
+
+function App() {
+   const [Auth, setAuth] = useState();
+
+  // Similar to componentDidMount and componentDidUpdate:
+  useEffect(() => {
+    // Update the document title using the browser API
+    if (Auth === AuthState.SignedIn) {
+      window.location.href = ("/Directory")
+    }
+  }, []);
+  const handleAuthStateChange = (nextAuthState) =>{
+    if (nextAuthState === AuthState.SignedIn) {
+      setAuth(nextAuthState)
+    }
+  }
+  
     return (
-      <AmplifyAuthenticator usernameAlias="email">
+      <AmplifyAuthenticator handleAuthStateChange={handleAuthStateChange} >
       <BrowserRouter basename={process.env.PUBLIC_URL}>
         <NavBar />
         
@@ -28,10 +47,10 @@ class App extends Component {
       </BrowserRouter>
       </AmplifyAuthenticator>
     );
-  }
+
 }
 
-Amplify.configure(awsconfig);
+
 
 export default withAuthenticator(App);
 
