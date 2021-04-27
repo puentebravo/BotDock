@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 
 const bots = [
-  { name: "Trouble finding the newest Xbox? This bot is for you!" },
-  { name: "This is Bot #2. Aren't they cute? Say Hi!" },
-  { name: "This is Bot #3. Aren't they cute? Say Hi!" },
-  { name: "This is Bot #4. Aren't they cute? Say Hi!" },
+  {
+    name: "Xbox Bot",
+    description: "Trouble finding the newest Xbox? This bot is for you!",
+  },
+  { name: "Bot #2", description: "This is Bot #2. Aren't they cute? Say Hi!" },
+  { name: "Bot #3", description: "This is Bot #3. Bot #3 is a bit confused. Say Hi!" },
+  { name: "Bot #4", description: "This is Bot #4. Bot #4 has places to go. Say Hi!" },
 ];
 
 function Index() {
@@ -46,7 +49,8 @@ function Index() {
                         onClick={() => setSelectedBot(0)}
                       >
                         Amazon X-Box Search Bot{" "}
-                        <img onClick={() => setSelectedBot(0)}
+                        <img
+                          onClick={() => setSelectedBot(0)}
                           src="https://drydenart.weebly.com/uploads/8/9/6/1/8961653/5076016_orig.gif"
                           style={{
                             height: "20%",
@@ -63,7 +67,8 @@ function Index() {
                       >
                         Bot 2{" "}
                       </p>
-                      <img onClick={() => setSelectedBot(1)}
+                      <img
+                        onClick={() => setSelectedBot(1)}
                         src="https://media0.giphy.com/media/3og0IUzdgwVczU67eg/giphy.gif"
                         style={{
                           height: "20%",
@@ -78,7 +83,8 @@ function Index() {
                       >
                         Bot 3{" "}
                       </p>
-                      <img onClick={() => setSelectedBot(2)}
+                      <img
+                        onClick={() => setSelectedBot(2)}
                         src="https://media4.giphy.com/media/20NLMBm0BkUOwNljwv/source.gif"
                         style={{
                           height: "30%",
@@ -93,7 +99,8 @@ function Index() {
                       >
                         Bot 4{" "}
                       </p>
-                      <img onClick={() => setSelectedBot(3)}
+                      <img
+                        onClick={() => setSelectedBot(3)}
                         src="https://cdn.dribbble.com/users/3603415/screenshots/10471601/robot-rig-loop.gif"
                         style={{
                           height: "30%",
@@ -103,14 +110,24 @@ function Index() {
                         }}
                       />
                     </div>
-                    <div className="border-solid border-4" style={{font:"menu", fontSize:"18px"}}>
-                      <p className="text-center mb-8">
+                    <div
+                      className="border-solid border-4"
+                      style={{ font: "menu", fontSize: "18px" }}
+                    >
+                      <p className="text-center mb-8"></p>
+                      
+                        <p style={{textAlign:"center", marginTop:"-4%"}}>Name:</p>
+                        <br></br>
+                        <div style={{textAlign:"center"}}>
                         {bots[selectedBot].name}
-                      </p>
-                      <p>Info</p>
+                        </div>
                       <div>
                         <div className="p-8 border-solid border-4">
-                          <p>Description</p>
+                          <p style={{textAlign:"center", marginTop:"-4%"}}>Description:</p>
+                          <br></br>
+                          <div style={{textAlign:"center"}}>
+                          {bots[selectedBot].description}
+                          </div>
                           <div className="text-center">
                             <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-16">
                               Deploy
