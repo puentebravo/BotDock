@@ -22,7 +22,7 @@ function Index() {
                 </div>
             </div>                          
             {/* Page title ends */}
-            <div className="bg-gray-200 pb-10" style={{paddingBottom:"50%", marginTop:"-2%", }}>
+            <div className="bg-gray-200 pb-10" style={{paddingBottom:"50%", marginTop:"-2%"}}>
                 <div className="container px-6 mx-auto">
                     <div className="relative z-10 w-full">
                         <div className="w-full -mt-8 h-auto">
@@ -62,8 +62,11 @@ function Index() {
                                                 <img src="https://drydenart.weebly.com/uploads/8/9/6/1/8961653/5076016_orig.gif" style={{height: "20%", width: "20%", marginLeft:"auto", marginRight:"auto"}} />
                                             </p>
                                             <p className="text-sm text-gray-600" onClick={() => setSelectedBot(1)}>Bot 2 </p>
+                                            <img src="https://webstockreview.net/images/clipart-monkey-gif-animation-12.gif" style={{height: "20%", width: "20%", marginLeft:"auto", marginRight:"auto"}} />
                                             <p className="text-sm text-gray-600" onClick={() => setSelectedBot(2)}>Bot 3 </p>
+                                            <img src="https://webstockreview.net/images/robot-clipart-animation-14.gif" style={{height: "20%", width: "20%", marginLeft:"auto", marginRight:"auto"}} />
                                             <p className="text-sm text-gray-600" onClick={() => setSelectedBot(3)}>Bot 4 </p>
+                                            <img src="https://media0.giphy.com/media/WOCAFAPZ3zhilCYINm/giphy.gif" style={{height: "20%", width: "20%", marginLeft:"auto", marginRight:"auto"}} />
                                         </div>
                                         <div className="border-solid border-4" >
                                             <p className="text-center mb-8">
