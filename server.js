@@ -3,15 +3,13 @@ const path = require("path");
 const PORT = process.env.PORT || 3001;
 const app = express();
 const routes = require("./routes");
-const password = require("./.env");
-const username = require("./.env");
 const mongoose = require("mongoose");
 
 const url =
   "mongodb+srv://" +
-  username +
+  process.env.username +
   ":" +
-  password +
+  process.env.password +
   "@cluster0.sxlwr.mongodb.net/Userdb?retryWrites=true&w=majority";
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
