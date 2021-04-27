@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import API from "../utils/API.js";
 
 const bots = [
   {
@@ -18,6 +19,14 @@ const bots = [
 
 function Index() {
   const [selectedBot, setSelectedBot] = useState(0);
+
+  const deployBot = () => {
+    API.getBot().then(() => {
+      alert(
+        "Bot Deployed! Be sure to check your SMS messages. If you don't hear from your bot in the next few minutes, make sure the phone number we have on file is correct."
+      );
+    });
+  };
 
   return (
     <div style={{ minHeight: "100%" }}>
@@ -67,6 +76,7 @@ function Index() {
                             marginRight: "auto",
                             paddingTop: "-",
                           }}
+                          alt="Robot"
                         />
                       </p>
                       <p
@@ -84,6 +94,7 @@ function Index() {
                           marginLeft: "auto",
                           marginRight: "auto",
                         }}
+                        alt="Robot"
                       />
                       <p
                         className="text-sm text-gray-600"
@@ -100,6 +111,7 @@ function Index() {
                           marginLeft: "auto",
                           marginRight: "auto",
                         }}
+                        alt="Robot"
                       />
                       <p
                         className="text-sm text-gray-600"
@@ -116,6 +128,7 @@ function Index() {
                           marginLeft: "auto",
                           marginRight: "auto",
                         }}
+                        alt="Robot"
                       />
                     </div>
                     <div
@@ -141,8 +154,12 @@ function Index() {
                             {bots[selectedBot].description}
                           </div>
                           <div className="text-center">
-                            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-16">
+                            <button
+                              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-16"
+                              onClick={deployBot()}
+                            >
                               Deploy
+                            
                             </button>
                             <br></br>
                             <br></br>
@@ -153,8 +170,7 @@ function Index() {
                                 width: "20%",
                                 marginLeft: "auto",
                                 marginRight: "auto",
-                              }}
-                            />
+                              }}/>
                           </div>
                         </div>
                       </div>
