@@ -1,5 +1,6 @@
 {
   "name": "bot-dock",
+  "homepage": "https://cryptic-refuge-91159.herokuapp.com/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
