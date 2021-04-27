@@ -2,18 +2,12 @@ import React, { useState } from "react";
 
 const bots = [
   {
-    name: "Xbox Bot",
+    name: "Xbox Amazon Search Bot",
     description: "Trouble finding the newest Xbox? This bot is for you!",
   },
   { name: "Bot #2", description: "This is Bot #2. Aren't they cute? Say Hi!" },
-  {
-    name: "Bot #3",
-    description: "This is Bot #3. Bot #3 is a bit confused. Say Hi!",
-  },
-  {
-    name: "Bot #4",
-    description: "This is Bot #4. Bot #4 has places to go. Say Hi!",
-  },
+  { name: "Bot #3", description: "This is Bot #3. Bot #3 is a bit confused. Say Hi!" },
+  { name: "Bot #4", description: "This is Bot #4. Bot #4 has places to go. Say Hi!" },
 ];
 
 function Index() {
@@ -21,15 +15,9 @@ function Index() {
 
   return (
     <div style={{ minHeight: "100%" }}>
-      <div
-        className="bg-gray-200 pb-10"
-        style={{
-          paddingBottom: "100%",
-          marginTop: "-2%",
-          position: "relative",
-        }}
-      >
-        <div className="container px-6 mx-auto" style={{ paddingTop: "10%" }}>
+
+      <div className="bg-gray-200 pb-10" style={{paddingBottom:"100%", marginTop:"-2%", position:"relative"}}>
+        <div className="container px-6 mx-auto" style={{paddingTop:"8%"}}>
           <div className="relative z-10 w-full">
             <div className="w-full -mt-8 h-auto">
               {/* Remove class [ h-64 ] when adding a card block */}
@@ -37,8 +25,11 @@ function Index() {
                 className="container mx-auto h-64"
                 style={{ height: "1000%" }}
               >
+                  <p style={{textAlign:"center", fontSize:"25px", marginTop:"-2%"}}>Choose Your Bot Below</p>
                 <div className="bg-white w-full h-full rounded shadow">
+                    
                   <div className="grid grid-cols-2 gap-4">
+                      
                     <div
                       className="border-solid border-4 h-48 overflow-scroll"
                       style={{ height: "100%" }}
@@ -58,7 +49,6 @@ function Index() {
                             marginRight: "auto",
                             paddingTop: "-",
                           }}
-                          alt="Robot"
                         />
                       </p>
                       <p
@@ -67,7 +57,6 @@ function Index() {
                       >
                         Bot 2{" "}
                       </p>
-
                       <img
                         onClick={() => setSelectedBot(1)}
                         src="https://media0.giphy.com/media/3og0IUzdgwVczU67eg/giphy.gif"
@@ -77,7 +66,6 @@ function Index() {
                           marginLeft: "auto",
                           marginRight: "auto",
                         }}
-                        alt="Robot"
                       />
                       <p
                         className="text-sm text-gray-600"
@@ -94,7 +82,6 @@ function Index() {
                           marginLeft: "auto",
                           marginRight: "auto",
                         }}
-                        alt="Robot"
                       />
                       <p
                         className="text-sm text-gray-600"
@@ -111,62 +98,41 @@ function Index() {
                           marginLeft: "auto",
                           marginRight: "auto",
                         }}
-                        alt="Robot"
                       />
                     </div>
-
                     <div
                       className="border-solid border-4"
                       style={{ font: "menu", fontSize: "18px" }}
                     >
-                      <p style={{ textAlign: "center", marginTop: "-4%" }}>
-                        Name:
-                      </p>
-                      <br></br>
-                      <div style={{ textAlign: "center" }}>
+                      <p className="text-center mb-8"></p>
+                      
+                        <p style={{textAlign:"center", marginTop:"-4%"}}>Name:</p>
+                        <br></br>
+                        <div style={{textAlign:"center"}}>
                         {bots[selectedBot].name}
-                      </div>
+                        </div>
                       <div>
                         <div className="p-8 border-solid border-4">
-                          <p style={{ textAlign: "center", marginTop: "-4%" }}>
-                            Description:
-                          </p>
+                          <p style={{textAlign:"center", marginTop:"-4%"}}>Description:</p>
                           <br></br>
-                          <div style={{ textAlign: "center" }}>
-                            {bots[selectedBot].name}
+                          <div style={{textAlign:"center"}}>
+                          {bots[selectedBot].description}
                           </div>
-                          <div>
-                            <div className="p-8 border-solid border-4">
-                              <p
-                                style={{
-                                  textAlign: "center",
-                                  marginTop: "-4%",
-                                }}
-                              >
-                                Description:
-                              </p>
-                              <br></br>
-                              <div style={{ textAlign: "center" }}>
-                                {bots[selectedBot].description}
-                              </div>
-                              <div className="text-center">
-                                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-16">
-                                  Deploy
-                                </button>
-                                <br></br>
-                                <br></br>
-                                <img
-                                  src="https://lh3.googleusercontent.com/proxy/iFXH4nqQN9XWJpVcz2FbXfvaFhbMbN4GjQZGq8kjOXNARGr51oWarMwR9I3LilrYzHRFzNGs1PGBWxVRF19QU3cetrHteBM30qqGz0B8sCm_MaEHed8Q-wkzeEX4vVvSJlPON2_jY1dyvqFSXx8WBMG_s9GsMVwQJ-2EaFnzdRwJajSBY5Te8RcHhiIPcq8"
-                                  style={{
-                                    height: "20%",
-                                    width: "20%",
-                                    marginLeft: "auto",
-                                    marginRight: "auto",
-                                  }}
-                                  alt="Robot"
-                                />
-                              </div>
-                            </div>
+                          <div className="text-center">
+                            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-16">
+                              Deploy
+                            </button>
+                            <br></br>
+                            <br></br>
+                            <img
+                              src="https://lh3.googleusercontent.com/proxy/iFXH4nqQN9XWJpVcz2FbXfvaFhbMbN4GjQZGq8kjOXNARGr51oWarMwR9I3LilrYzHRFzNGs1PGBWxVRF19QU3cetrHteBM30qqGz0B8sCm_MaEHed8Q-wkzeEX4vVvSJlPON2_jY1dyvqFSXx8WBMG_s9GsMVwQJ-2EaFnzdRwJajSBY5Te8RcHhiIPcq8"
+                              style={{
+                                height: "20%",
+                                width: "20%",
+                                marginLeft: "auto",
+                                marginRight: "auto",
+                              }}
+                            />
                           </div>
                         </div>
                       </div>
