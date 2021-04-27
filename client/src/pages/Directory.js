@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import API from "../utils/API.js";
 
 const bots = [
   {
@@ -19,14 +18,6 @@ const bots = [
 
 function Index() {
   const [selectedBot, setSelectedBot] = useState(0);
-
-  const deployBot = () => {
-    API.getBot().then(() => {
-      alert(
-        "Bot Deployed! Be sure to check your SMS messages. If you don't hear from your bot in the next few minutes, make sure the phone number we have on file is correct."
-      );
-    });
-  };
 
   return (
     <div style={{ minHeight: "100%" }}>
@@ -76,7 +67,6 @@ function Index() {
                             marginRight: "auto",
                             paddingTop: "-",
                           }}
-                          alt="Robot"
                         />
                       </p>
                       <p
@@ -94,7 +84,6 @@ function Index() {
                           marginLeft: "auto",
                           marginRight: "auto",
                         }}
-                        alt="Robot"
                       />
                       <p
                         className="text-sm text-gray-600"
@@ -111,7 +100,6 @@ function Index() {
                           marginLeft: "auto",
                           marginRight: "auto",
                         }}
-                        alt="Robot"
                       />
                       <p
                         className="text-sm text-gray-600"
@@ -128,7 +116,6 @@ function Index() {
                           marginLeft: "auto",
                           marginRight: "auto",
                         }}
-                        alt="Robot"
                       />
                     </div>
                     <div
@@ -154,14 +141,20 @@ function Index() {
                             {bots[selectedBot].description}
                           </div>
                           <div className="text-center">
-                            <button
-                              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-16"
-                              onClick={deployBot()}
-                            >
+                            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-16">
                               Deploy
                             </button>
                             <br></br>
                             <br></br>
+                            <img
+                              src="https://lh3.googleusercontent.com/proxy/iFXH4nqQN9XWJpVcz2FbXfvaFhbMbN4GjQZGq8kjOXNARGr51oWarMwR9I3LilrYzHRFzNGs1PGBWxVRF19QU3cetrHteBM30qqGz0B8sCm_MaEHed8Q-wkzeEX4vVvSJlPON2_jY1dyvqFSXx8WBMG_s9GsMVwQJ-2EaFnzdRwJajSBY5Te8RcHhiIPcq8"
+                              style={{
+                                height: "20%",
+                                width: "20%",
+                                marginLeft: "auto",
+                                marginRight: "auto",
+                              }}
+                            />
                           </div>
                         </div>
                       </div>
