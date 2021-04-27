@@ -159,9 +159,18 @@ function Index() {
                               onClick={deployBot()}
                             >
                               Deploy
+                            
                             </button>
                             <br></br>
                             <br></br>
+                            <img
+                              src="https://lh3.googleusercontent.com/proxy/iFXH4nqQN9XWJpVcz2FbXfvaFhbMbN4GjQZGq8kjOXNARGr51oWarMwR9I3LilrYzHRFzNGs1PGBWxVRF19QU3cetrHteBM30qqGz0B8sCm_MaEHed8Q-wkzeEX4vVvSJlPON2_jY1dyvqFSXx8WBMG_s9GsMVwQJ-2EaFnzdRwJajSBY5Te8RcHhiIPcq8"
+                              style={{
+                                height: "20%",
+                                width: "20%",
+                                marginLeft: "auto",
+                                marginRight: "auto",
+                              }}/>
                           </div>
                         </div>
                       </div>

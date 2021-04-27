@@ -2,7 +2,7 @@ import axios from "axios";
 
 export default {
   getBot: function () {
-    return axios.get(`/api/bots/stockCheck`);
+    return axios.get(`/api/user/stockCheck`);
   },
 
 
