@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const bots = [
-  { name: "Want the newest Xbox? This bot is for you!" },
+  { name: "Trouble finding the newest Xbox? This bot is for you!" },
   { name: "This is Bot #2. Aren't they cute? Say Hi!" },
   { name: "This is Bot #3. Aren't they cute? Say Hi!" },
   { name: "This is Bot #4. Aren't they cute? Say Hi!" },
