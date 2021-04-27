@@ -25,8 +25,11 @@ function Index() {
                 className="container mx-auto h-64"
                 style={{ height: "1000%" }}
               >
+                  <p style={{textAlign:"center", fontSize:"25px"}}>Choose Your Bot Below</p>
                 <div className="bg-white w-full h-full rounded shadow">
+                    
                   <div className="grid grid-cols-2 gap-4">
+                      
                     <div
                       className="border-solid border-4 h-48 overflow-scroll"
                       style={{ height: "100%" }}
