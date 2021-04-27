@@ -25,7 +25,7 @@ function Index() {
                 className="container mx-auto h-64"
                 style={{ height: "1000%" }}
               >
-                  <p style={{textAlign:"center", fontSize:"25px"}}>Choose Your Bot Below</p>
+                  <p style={{textAlign:"center", fontSize:"25px", marginTop:"-2%"}}>Choose Your Bot Below</p>
                 <div className="bg-white w-full h-full rounded shadow">
                     
                   <div className="grid grid-cols-2 gap-4">
@@ -49,7 +49,6 @@ function Index() {
                             marginRight: "auto",
                             paddingTop: "-",
                           }}
-                          alt="Robot"
                         />
                       </p>
                       <p
@@ -67,7 +66,6 @@ function Index() {
                           marginLeft: "auto",
                           marginRight: "auto",
                         }}
-                        alt="Robot"
                       />
                       <p
                         className="text-sm text-gray-600"
@@ -84,7 +82,6 @@ function Index() {
                           marginLeft: "auto",
                           marginRight: "auto",
                         }}
-                        alt="Robot"
                       />
                       <p
                         className="text-sm text-gray-600"
@@ -101,7 +98,6 @@ function Index() {
                           marginLeft: "auto",
                           marginRight: "auto",
                         }}
-                        alt="Robot"
                       />
                     </div>
                     <div
@@ -114,12 +110,10 @@ function Index() {
                         <br></br>
                         <div style={{textAlign:"center"}}>
                         {bots[selectedBot].name}
-                      </div>
+                        </div>
                       <div>
                         <div className="p-8 border-solid border-4">
-                          <p style={{ textAlign: "center", marginTop: "-4%" }}>
-                            Description:
-                          </p>
+                          <p style={{textAlign:"center", marginTop:"-4%"}}>Description:</p>
                           <br></br>
                           <div style={{textAlign:"center"}}>
                           {bots[selectedBot].description}
