@@ -3,10 +3,6 @@ const path = require("path");
 const PORT = process.env.PORT || 3001;
 const app = express();
 const routes = require("./routes");
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
 const mongoose = require("mongoose");
 
 const url =
