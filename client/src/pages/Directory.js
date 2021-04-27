@@ -58,6 +58,7 @@ function Index() {
                             marginRight: "auto",
                             paddingTop: "-",
                           }}
+                          alt="Robot"
                         />
                       </p>
                       <p
@@ -76,6 +77,7 @@ function Index() {
                           marginLeft: "auto",
                           marginRight: "auto",
                         }}
+                        alt="Robot"
                       />
                       <p
                         className="text-sm text-gray-600"
@@ -92,6 +94,7 @@ function Index() {
                           marginLeft: "auto",
                           marginRight: "auto",
                         }}
+                        alt="Robot"
                       />
                       <p
                         className="text-sm text-gray-600"
@@ -108,6 +111,7 @@ function Index() {
                           marginLeft: "auto",
                           marginRight: "auto",
                         }}
+                        alt="Robot"
                       />
                     </div>
 
@@ -159,6 +163,7 @@ function Index() {
                                     marginLeft: "auto",
                                     marginRight: "auto",
                                   }}
+                                  alt="Robot"
                                 />
                               </div>
                             </div>
