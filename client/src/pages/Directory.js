@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const bots = [
   {
-    name: "Xbox Bot",
+    name: "Xbox Amazon Search Bot",
     description: "Trouble finding the newest Xbox? This bot is for you!",
   },
   { name: "Bot #2", description: "This is Bot #2. Aren't they cute? Say Hi!" },
@@ -17,7 +17,7 @@ function Index() {
     <div style={{ minHeight: "100%" }}>
 
       <div className="bg-gray-200 pb-10" style={{paddingBottom:"100%", marginTop:"-2%", position:"relative"}}>
-        <div className="container px-6 mx-auto" style={{paddingTop:"10%"}}>
+        <div className="container px-6 mx-auto" style={{paddingTop:"8%"}}>
           <div className="relative z-10 w-full">
             <div className="w-full -mt-8 h-auto">
               {/* Remove class [ h-64 ] when adding a card block */}
