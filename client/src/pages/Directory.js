@@ -21,8 +21,11 @@ function Index() {
 
   return (
     <div style={{ minHeight: "100%" }}>
-      <div className="bg-gray-200 pb-10">
-        <div className="container px-6 mx-auto">
+
+
+      <div className="bg-gray-200 pb-10" style={{paddingBottom:"100%", marginTop:"-2%", position:"relative"}}>
+        <div className="container px-6 mx-auto" style={{paddingTop:"10%"}}>
+
           <div className="relative z-10 w-full">
             <div className="w-full -mt-8 h-auto">
               {/* Remove class [ h-64 ] when adding a card block */}
@@ -76,7 +79,6 @@ function Index() {
                       >
                         Bot 3{" "}
                       </p>
-
                       <img
                         onClick={() => setSelectedBot(2)}
                         src="https://media4.giphy.com/media/20NLMBm0BkUOwNljwv/source.gif"
@@ -93,7 +95,6 @@ function Index() {
                       >
                         Bot 4{" "}
                       </p>
-
                       <img
                         onClick={() => setSelectedBot(3)}
                         src="https://cdn.dribbble.com/users/3603415/screenshots/10471601/robot-rig-loop.gif"
@@ -110,14 +111,16 @@ function Index() {
                       className="border-solid border-4"
                       style={{ font: "menu", fontSize: "18px" }}
                     >
-                      <p className="text-center mb-8">
-                        <div
-                          className="border-solid border-4"
-                          style={{ font: "menu", fontSize: "18px" }}
-                        >
-                          <p style={{ textAlign: "center", marginTop: "-4%" }}>
-                            Name:
-                          </p>
+<p className="text-center mb-8"></p>
+                      
+                        <p style={{textAlign:"center", marginTop:"-4%"}}>Name:</p>
+                        <br></br>
+                        <div style={{textAlign:"center"}}>
+                        {bots[selectedBot].name}
+                        </div>
+                      <div>
+                        <div className="p-8 border-solid border-4">
+                          <p style={{textAlign:"center", marginTop:"-4%"}}>Description:</p>
                           <br></br>
                           <div style={{ textAlign: "center" }}>
                             {bots[selectedBot].name}
