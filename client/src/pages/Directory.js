@@ -12,7 +12,7 @@ function Index() {
 
     return (
         
-        <div>
+        <div style={{minHeight: "100%"}}>
             {/* Page title starts */}
             <div className="relative z-10 bg-gray-800 pt-8 pb-16">
                 <div className="container px-6 mx-auto flex flex-col lg:flex-row items-start lg:items-center justify-between">
@@ -22,7 +22,7 @@ function Index() {
                 </div>
             </div>                          
             {/* Page title ends */}
-            <div className="bg-gray-200 pb-10">
+            <div className="bg-gray-200 pb-10" style={{paddingBottom:"50%", marginTop:"-2%", }}>
                 <div className="container px-6 mx-auto">
                     <div className="relative z-10 w-full">
                         <div className="w-full -mt-8 h-auto">
@@ -44,26 +44,28 @@ function Index() {
                                         <option className="text-sm text-gray-600" onClick={() => setSelectedBot(3)}>Bot 4 </option>
                                     </select>
                                 </div>
-                                <ul className="hidden lg:flex flex-row items-center h-full">
-                                    <li className="ml-4 my-2 lg:my-0 rounded text-base text-gray-800 px-4 py-2 bg-gray-200" onClick={() => setSelectedBot(0)}>Amazon X-Box Search Bot</li>
+                                <ul className="hidden lg:flex flex-row items-center h-full" style={{marginTop:"2.6%"}}>
+                                    <li className="ml-4 my-2 lg:my-0 rounded text-base text-gray-800 px-4 py-2 bg-gray-200" onClick={() => setSelectedBot(0)}>Amazon X-Box Search Bot
+                                    </li>
                                     <li className="pl-10 my-0 text-base text-gray-600" onClick={() => setSelectedBot(1)}>Bot 2</li>
                                     <li className="pl-10 my-0 text-base text-gray-600" onClick={() => setSelectedBot(2)}>Bot 3</li>
                                     <li className="pl-10 my-0 text-base text-gray-600" onClick={() => setSelectedBot(3)}>Bot 4</li>
                                 </ul>
                             </div>
                             {/* Remove class [ h-64 ] when adding a card block */}
-                            <div className="container mx-auto h-64">
+                            <div className="container mx-auto h-64" style={{height: "1000%"}}>
                                 <div className="bg-white w-full h-full rounded shadow">
                                     <div className="grid grid-cols-2 gap-4">
-                                        <div className="border-solid border-4 h-48 overflow-scroll">
+                                        <div className="border-solid border-4 h-48 overflow-scroll" style={{height: "100%"}}>
                                             <p className="text-sm text-gray-600" onClick={() => setSelectedBot(0)}>
                                                 Amazon X-Box Search Bot{" "}
+                                                <img src="https://drydenart.weebly.com/uploads/8/9/6/1/8961653/5076016_orig.gif" style={{height: "20%", width: "20%", marginLeft:"auto", marginRight:"auto"}} />
                                             </p>
                                             <p className="text-sm text-gray-600" onClick={() => setSelectedBot(1)}>Bot 2 </p>
                                             <p className="text-sm text-gray-600" onClick={() => setSelectedBot(2)}>Bot 3 </p>
                                             <p className="text-sm text-gray-600" onClick={() => setSelectedBot(3)}>Bot 4 </p>
                                         </div>
-                                        <div className="border-solid border-4">
+                                        <div className="border-solid border-4" >
                                             <p className="text-center mb-8">
                                                 {bots[selectedBot].name}
                                             </p>
@@ -73,7 +75,7 @@ function Index() {
                                                     <p>Description</p>
                                                     <div className="text-center">
                                                         <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-16">
-                                                            Button
+                                                            Deploy
                                                         </button>
                                                     </div>
                                                 </div>
@@ -85,8 +87,9 @@ function Index() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>            
         </div>
+        
     );
 }
 

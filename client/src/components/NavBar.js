@@ -4,6 +4,7 @@ import { useLocation } from "react-router-dom";
 import Contact from "../pages/Contact";
 import Directory from "../pages/Directory";
 import Home from "../pages/Home";
+import {AmplifySignOut} from "@aws-amplify/ui-react";
 export default function IndexPage() {
     const [show, setShow] = useState(null);
     return (
@@ -48,6 +49,7 @@ export default function IndexPage() {
                                     Contact
                                 </li>
                                 </Link>
+                                <AmplifySignOut style={{width:"20%"}}/>
                             </ul>
                         </div>
                         <div className="flex items-center xl:hidden">

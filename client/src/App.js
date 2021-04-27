@@ -22,7 +22,7 @@ function App() {
         <Route exact path="/" component={Directory} />
         <Route exact path="/Contact" component={Contact} />
       </BrowserRouter>
-      <AmplifySignOut />
+      
     </AmplifyAuthenticator>
   );
 }
