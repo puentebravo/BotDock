@@ -49,7 +49,9 @@ export default function IndexPage() {
                                     Contact
                                 </li>
                                 </Link>
-                                <AmplifySignOut style={{width:"20%"}}/>
+                                <div style={{position: "relative", marginLeft: "auto"}}>
+                                <AmplifySignOut />
+                                </div>
                             </ul>
                         </div>
                         <div className="flex items-center xl:hidden">
@@ -196,6 +198,7 @@ export default function IndexPage() {
                                                     </div>
                                                 </li>
                                             </Link>
+                                            
                                             <li className="text-white pt-8 cursor-pointer">
                                                 <div className="flex items-center justify-between">
                                                 </div>
@@ -212,7 +215,7 @@ export default function IndexPage() {
                                                         <line x1={21} y1={21} x2={15} y2={15} />
                                                     </svg>
                                                 </div>
-                                                <input className="bg-gray-100 focus:outline-none rounded w-full text-sm text-gray-500 bg-gray-700 pl-10 py-2" type="text" placeholder="Search" />
+                                                <AmplifySignOut />
                                             </div>
                                         </div>
                                     </div>
