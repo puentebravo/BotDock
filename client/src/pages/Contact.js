@@ -1,7 +1,6 @@
 import React from "react";
 import { Formik } from 'formik';
 import * as Yup from "yup";
-import NavBar from "../components/NavBar"
 
 const ContactSchema = Yup.object().shape({
   email: Yup.string()
