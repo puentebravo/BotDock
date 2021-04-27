@@ -22,7 +22,7 @@ function Index() {
                 </div>
             </div>                          
             {/* Page title ends */}
-            <div className="bg-gray-200 pb-10" style={{paddingBottom:"50%", marginTop:"-2%"}}>
+            <div className="bg-gray-200 pb-10" style={{marginTop:"-2%"}}>
                 <div className="container px-6 mx-auto">
                     <div className="relative z-10 w-full">
                         <div className="w-full -mt-8 h-auto">
@@ -37,7 +37,7 @@ function Index() {
                                     </div>
                                     <select aria-label="Selected tab" className="form-select block w-full p-3 border border-gray-300 rounded text-gray-600 appearance-none bg-transparent relative z-10">
                                         <option selected className="text-sm text-gray-600" onClick={() => setSelectedBot(0)}>
-                                            Amazon X-Box Search Bot{" "}
+                                            Amazon X-Box Search Bot {" "}<br></br> 
                                         </option>
                                         <option className="text-sm text-gray-600" onClick={() => setSelectedBot(1)}>Bot 2 </option>
                                         <option className="text-sm text-gray-600" onClick={() => setSelectedBot(2)}>Bot 3 </option>
@@ -45,7 +45,8 @@ function Index() {
                                     </select>
                                 </div>
                                 <ul className="hidden lg:flex flex-row items-center h-full" style={{marginTop:"2.6%"}}>
-                                    <li className="ml-4 my-2 lg:my-0 rounded text-base text-gray-800 px-4 py-2 bg-gray-200" onClick={() => setSelectedBot(0)}>Amazon X-Box Search Bot
+                                    <li className="pl-10 my-0 text-base text-gray-600" onClick={() => setSelectedBot(0)}>Amazon X-Box Search Bot
+                               
                                     </li>
                                     <li className="pl-10 my-0 text-base text-gray-600" onClick={() => setSelectedBot(1)}>Bot 2</li>
                                     <li className="pl-10 my-0 text-base text-gray-600" onClick={() => setSelectedBot(2)}>Bot 3</li>
@@ -59,14 +60,14 @@ function Index() {
                                         <div className="border-solid border-4 h-48 overflow-scroll" style={{height: "100%"}}>
                                             <p className="text-sm text-gray-600" onClick={() => setSelectedBot(0)}>
                                                 Amazon X-Box Search Bot{" "}
-                                                <img src="https://drydenart.weebly.com/uploads/8/9/6/1/8961653/5076016_orig.gif" style={{height: "20%", width: "20%", marginLeft:"auto", marginRight:"auto"}} />
+                                                <img src="https://drydenart.weebly.com/uploads/8/9/6/1/8961653/5076016_orig.gif" style={{height: "20%", width: "20%", marginLeft:"auto", marginRight:"auto", paddingTop:"-"}} />
                                             </p>
                                             <p className="text-sm text-gray-600" onClick={() => setSelectedBot(1)}>Bot 2 </p>
                                             <img src="https://webstockreview.net/images/clipart-monkey-gif-animation-12.gif" style={{height: "20%", width: "20%", marginLeft:"auto", marginRight:"auto"}} />
                                             <p className="text-sm text-gray-600" onClick={() => setSelectedBot(2)}>Bot 3 </p>
-                                            <img src="https://webstockreview.net/images/robot-clipart-animation-14.gif" style={{height: "20%", width: "20%", marginLeft:"auto", marginRight:"auto"}} />
+                                            <img src="https://media4.giphy.com/media/20NLMBm0BkUOwNljwv/source.gif" style={{height: "30%", width: "30%", marginLeft:"auto", marginRight:"auto"}} />
                                             <p className="text-sm text-gray-600" onClick={() => setSelectedBot(3)}>Bot 4 </p>
-                                            <img src="https://media0.giphy.com/media/WOCAFAPZ3zhilCYINm/giphy.gif" style={{height: "20%", width: "20%", marginLeft:"auto", marginRight:"auto"}} />
+                                            <img src="https://cdn.dribbble.com/users/3603415/screenshots/10471601/robot-rig-loop.gif" style={{height: "30%", width: "30%", marginLeft:"auto", marginRight:"auto"}} />
                                         </div>
                                         <div className="border-solid border-4" >
                                             <p className="text-center mb-8">
