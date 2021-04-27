@@ -21,11 +21,15 @@ function Index() {
 
   return (
     <div style={{ minHeight: "100%" }}>
-
-
-      <div className="bg-gray-200 pb-10" style={{paddingBottom:"100%", marginTop:"-2%", position:"relative"}}>
-        <div className="container px-6 mx-auto" style={{paddingTop:"10%"}}>
-
+      <div
+        className="bg-gray-200 pb-10"
+        style={{
+          paddingBottom: "100%",
+          marginTop: "-2%",
+          position: "relative",
+        }}
+      >
+        <div className="container px-6 mx-auto" style={{ paddingTop: "10%" }}>
           <div className="relative z-10 w-full">
             <div className="w-full -mt-8 h-auto">
               {/* Remove class [ h-64 ] when adding a card block */}
@@ -111,16 +115,18 @@ function Index() {
                       className="border-solid border-4"
                       style={{ font: "menu", fontSize: "18px" }}
                     >
-<p className="text-center mb-8"></p>
-                      
-                        <p style={{textAlign:"center", marginTop:"-4%"}}>Name:</p>
-                        <br></br>
-                        <div style={{textAlign:"center"}}>
+                      <p style={{ textAlign: "center", marginTop: "-4%" }}>
+                        Name:
+                      </p>
+                      <br></br>
+                      <div style={{ textAlign: "center" }}>
                         {bots[selectedBot].name}
-                        </div>
+                      </div>
                       <div>
                         <div className="p-8 border-solid border-4">
-                          <p style={{textAlign:"center", marginTop:"-4%"}}>Description:</p>
+                          <p style={{ textAlign: "center", marginTop: "-4%" }}>
+                            Description:
+                          </p>
                           <br></br>
                           <div style={{ textAlign: "center" }}>
                             {bots[selectedBot].name}
@@ -158,7 +164,7 @@ function Index() {
                             </div>
                           </div>
                         </div>
-                      </p>
+                      </div>
                     </div>
                   </div>
                 </div>
